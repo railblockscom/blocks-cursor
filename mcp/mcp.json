@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "<YOUR_SUPABASE_ACCESS_TOKEN>"
+      ]
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "Dub Documentation": {
+      "name": "Dub Documentation",
+      "url": "https://dub.co/docs/mcp",
+      "headers": {}
+    },
+    "convex": {
+      "command": "npx -y convex@latest mcp start",
+      "env": {},
+      "args": []
+    },
+    "greptile": {
+      "type": "http",
+      "url": "https://api.greptile.com/mcp",
+      "headers": {
+        "Authorization": "Bearer <YOUR_GREPTILE_API_KEY>"
+      }
+    },
+    "axiom": {
+      "url": "https://mcp.axiom.co/mcp",
+      "headers": {}
+    },
+    "posthog": {
+      "url": "https://mcp.posthog.com/mcp"
+    }
+  }
+}

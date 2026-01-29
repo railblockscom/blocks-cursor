@@ -1,6 +1,6 @@
 # Blocks Cursor
 
-Shared Cursor agents, rules, and skills for the Railblocks team.
+Shared Cursor agents, rules, skills, and MCPs for the Blocks team.
 If you are confused about what any of the terms mean, [watch this first](https://www.youtube.com/watch?v=L_p5GxGSB_I)
 
 ## Purpose
@@ -16,9 +16,15 @@ This repo is a **shared library** of personal Cursor configurations that team me
 
 ## Structure
 
-- `.cursor/agents/` - Custom subagents for specialized tasks
-- `.cursor/rules/` - Rules that apply to all conversations
-- `.cursor/skills/` - Agent skills for reusable workflows and patterns
+```
+blocks-cursor/
+├── agents/      → copy to ~/.cursor/agents/
+├── rules/       → copy to ~/.cursor/rules/
+├── skills/      → copy to ~/.cursor/skills/
+└── mcp/
+    ├── mcp.json → copy to ~/.cursor/mcp.json
+    └── mcp.md   → reference only
+```
 
 ## Agents
 
@@ -33,19 +39,41 @@ Documentation lookup specialist using Context7 MCP. Use proactively when buildin
 ### delegate-to-subagents
 Instructs the agent to actively look for opportunities to delegate tasks to subagents using faster models. Applies to all conversations.
 
+## MCPs
+
+MCP (Model Context Protocol) servers extend Cursor's capabilities with external tools and data sources. See [`mcp/mcp.md`](mcp/mcp.md) for full documentation on each server.
+
+**Available MCPs:**
+- **Context7** - Library/framework documentation lookup
+- **Supabase** - Database management, migrations, edge functions
+- **Convex** - Backend queries, data management, logs
+- **Greptile** - AI-powered code search and review
+- **Axiom** - Logs and observability
+- **Dub** - Link management API docs
+- **PostHog** - Product analytics and feature flags
+
+**Setup:** Copy `mcp/mcp.json` to `~/.cursor/mcp.json` and add your credentials.
+
 ## Usage
 
 1. Clone or pull this repository
-2. Copy the configurations you want to use:
-   - Copy to `~/.cursor/` for global personal settings
-   - Or copy to a specific project's `.cursor/` directory
-3. Customize as needed — you maintain full control over your copy
+2. Copy the configurations you want to your local `~/.cursor/` folder:
+   ```bash
+   cp -r agents/ ~/.cursor/agents/
+   cp -r rules/ ~/.cursor/rules/
+   cp -r skills/ ~/.cursor/skills/
+   cp mcp/mcp.json ~/.cursor/mcp.json
+   ```
+3. Add your credentials to `~/.cursor/mcp.json` (replace placeholder tokens)
+4. Restart Cursor to load the changes
+5. Customize as needed — you maintain full control over your copy
 
 The point is to **copy and own** these configurations, not reference them. This way you can modify them to fit your workflow without affecting others.
 
 ## Contributing
 
-When adding new agents, rules, or skills:
+When adding new agents, rules, skills, or MCPs:
 - Follow existing naming conventions (lowercase with hyphens)
 - Include clear descriptions in the frontmatter
 - Document usage in this README
+- For MCPs, add documentation to `mcp/mcp.md`
