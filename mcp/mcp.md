@@ -21,27 +21,12 @@ Model Context Protocol (MCP) servers extend Cursor's agent capabilities with ext
 - Working with frameworks or libraries (React, Next.js, Stripe, etc.)
 - Need current API documentation or usage examples
 
-**Setup:** No authentication required.
+**Setup:** Requires a Context7 API key.
+1. Sign up at https://context7.com
+2. Get your API key from the dashboard
+3. Replace `<YOUR_CONTEXT7_API_KEY>` in mcp.json
 
-**Docs:** https://context7.com
-
----
-
-### Supabase
-
-**Purpose:** Manage Supabase projects, run SQL, deploy edge functions, and more.
-
-**Use when:**
-- Working with Supabase databases
-- Deploying edge functions
-- Managing migrations and branches
-
-**Setup:** Requires a Supabase access token.
-1. Go to https://supabase.com/dashboard/account/tokens
-2. Generate a new access token
-3. Replace `<YOUR_SUPABASE_ACCESS_TOKEN>` in mcp.json
-
-**Docs:** https://supabase.com/docs/guides/getting-started/mcp
+**Docs:** https://github.com/upstash/context7 => Follow README
 
 ---
 
@@ -56,7 +41,7 @@ Model Context Protocol (MCP) servers extend Cursor's agent capabilities with ext
 
 **Setup:** Run `npx convex login` first to authenticate.
 
-**Docs:** https://docs.convex.dev/
+**Docs:** https://docs.convex.dev/ai/mcp
 
 ---
 
@@ -74,7 +59,7 @@ Model Context Protocol (MCP) servers extend Cursor's agent capabilities with ext
 2. Get your API key from the dashboard
 3. Replace `<YOUR_GREPTILE_API_KEY>` in mcp.json
 
-**Docs:** https://docs.greptile.com
+**Docs:** https://docs.greptile.com/mcp
 
 ---
 
@@ -89,22 +74,7 @@ Model Context Protocol (MCP) servers extend Cursor's agent capabilities with ext
 
 **Setup:** Authentication handled via Axiom's OAuth flow in Cursor.
 
-**Docs:** https://axiom.co/docs
-
----
-
-### Dub Documentation
-
-**Purpose:** Search Dub's documentation for link management APIs.
-
-**Use when:**
-- Building link shortening features
-- Integrating with Dub's API
-- Working on analytics for links
-
-**Setup:** No authentication required.
-
-**Docs:** https://dub.co/docs
+**Docs:** https://axiom.co/docs/mcp
 
 ---
 
@@ -119,4 +89,4 @@ Model Context Protocol (MCP) servers extend Cursor's agent capabilities with ext
 
 **Setup:** Authentication handled via PostHog's OAuth flow in Cursor.
 
-**Docs:** https://posthog.com/docs
+**Docs:** https://posthog.com/docs/ai/mcp-server

@@ -1,21 +1,10 @@
 {
   "mcpServers": {
-    "supabase": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@supabase/mcp-server-supabase@latest",
-        "--access-token",
-        "<YOUR_SUPABASE_ACCESS_TOKEN>"
-      ]
-    },
     "context7": {
-      "url": "https://mcp.context7.com/mcp"
-    },
-    "Dub Documentation": {
-      "name": "Dub Documentation",
-      "url": "https://dub.co/docs/mcp",
-      "headers": {}
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "Authorization": "Bearer <YOUR_CONTEXT7_API_KEY>"
+      }
     },
     "convex": {
       "command": "npx -y convex@latest mcp start",

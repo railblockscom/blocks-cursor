@@ -45,11 +45,9 @@ MCP (Model Context Protocol) servers extend Cursor's capabilities with external 
 
 **Available MCPs:**
 - **Context7** - Library/framework documentation lookup
-- **Supabase** - Database management, migrations, edge functions
 - **Convex** - Backend queries, data management, logs
 - **Greptile** - AI-powered code search and review
 - **Axiom** - Logs and observability
-- **Dub** - Link management API docs
 - **PostHog** - Product analytics and feature flags
 
 **Setup:** Copy `mcp/mcp.json` to `~/.cursor/mcp.json` and add your credentials.
