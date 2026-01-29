@@ -52,6 +52,16 @@ MCP (Model Context Protocol) servers extend Cursor's capabilities with external 
 
 **Setup:** Copy `mcp/mcp.json` to `~/.cursor/mcp.json` and add your credentials.
 
+## Skills
+
+Skills are reusable capabilities for AI agents. They provide procedural knowledge that helps agents accomplish specific tasks more effectively. Think of them as plugins or extensions that enhance what your AI agent can do.
+
+It's a open standard, you can [read the specification here](https://agentskills.io/home)
+
+There are marketplaces to find and download skills built by other people such as:
+- [skills.sh](https://skills.sh/)
+- [context7 skills](https://x.com/Context7AI/status/2014702620758118768)
+
 ## Usage
 
 1. Clone or pull this repository
